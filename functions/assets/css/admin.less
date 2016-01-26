@@ -1,0 +1,108 @@
+@import url( 'mixins.less' );
+
+.wf-wrap {
+	.useful-links {
+		margin-left: 0;
+		display: block;
+		text-align: center;
+		li {
+			display: inline;
+			padding-right: 1.618em;
+		}
+		.documentation {
+			&:before {
+				font-family: 'dashicons';
+				content: "\f123";
+				position: relative;
+				top: 2px;
+				right: 5px;
+			}
+		}
+
+		.changelog {
+			&:before {
+				font-family: 'dashicons';
+				content: "\f107";
+				position: relative;
+				top: 2px;
+				right: 5px;
+			}
+		}
+
+		.support {
+			&:before {
+				font-family: 'dashicons';
+				content: "\f328";
+				position: relative;
+				top: 2px;
+				right: 5px;
+			}
+		}
+	}
+	.woo-notice {
+		.woo_notice;
+	}
+	.woo-notice p {
+		margin: .5em 0;
+		padding: 2px;
+	}
+	.settings-section {
+		td .woo-notice {
+			margin-left: -10px;
+			margin-top: -15px;
+			margin-bottom: 0;
+		}
+	}
+	.plugin-name {
+		strong {
+			display: block;
+		}
+	}
+}
+
+/* Styling for the 'useful links' section on desktop and larger screens. */
+@media screen and (min-width: 600px) {
+	.wf-wrap {
+		.nav-tab-wrapper {
+			margin-bottom: 1em;
+		}
+		.theme-name {
+			display: block;
+			padding-top: 0.618em;
+		}
+		#settings-sections.subsubsub {
+			position: relative;
+			margin-right: 140px;
+		}
+
+		.useful-links {
+			margin-left: 1em;
+			position: absolute;
+			right: 20px;
+			text-align: left;
+			li {
+				display: block;
+				padding: 0;
+			}
+		}
+	}
+	body.rtl {
+		.wf-wrap {
+			.useful-links {
+				left: 20px;
+				margin-left: 0;
+			}
+			#settings-sections.subsubsub {
+				margin-left: 140px;
+				margin-right: 0;
+			}
+		}
+	}
+}
+
+span.logo {
+	img {
+		height: auto;
+		max-height: 31px;
+	}
+}

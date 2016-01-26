@@ -1,0 +1,139 @@
+// ===============================================================================
+// Mixins
+// ===============================================================================
+.clearfix() {
+	&:after {
+		content: "\0020";
+		display: block;
+		height: 0;
+		overflow: hidden;
+		clear: both;
+	}
+}
+.border_radius(@radius:10px) {
+    -webkit-border-radius:@radius;
+    border-radius:@radius;
+    -moz-background-clip: padding; -webkit-background-clip: padding-box; background-clip: padding-box;
+}
+
+.border_radius_right(@radius:10px) {
+    -webkit-border-top-right-radius: @radius;
+    -webkit-border-bottom-right-radius: @radius;
+    border-top-right-radius: @radius;
+    border-bottom-right-radius: @radius;
+    -moz-background-clip: padding; -webkit-background-clip: padding-box; background-clip: padding-box;
+}
+
+.border_radius_left(@radius:10px) {
+    -webkit-border-top-left-radius: @radius;
+    -webkit-border-bottom-left-radius: @radius;
+    border-top-left-radius: @radius;
+    border-bottom-left-radius: @radius;
+    -moz-background-clip: padding; -webkit-background-clip: padding-box; background-clip: padding-box;
+}
+
+.border_radius_bottom(@radius:10px) {
+    -webkit-border-bottom-left-radius: @radius;
+    -webkit-border-bottom-right-radius: @radius;
+    border-bottom-left-radius: @radius;
+    border-bottom-right-radius: @radius;
+    -moz-background-clip: padding; -webkit-background-clip: padding-box; background-clip: padding-box;
+}
+
+.border_radius_top(@radius:10px) {
+    -webkit-border-top-left-radius: @radius;
+    -webkit-border-top-right-radius: @radius;
+    border-top-left-radius: @radius;
+    border-top-right-radius: @radius;
+    -moz-background-clip: padding; -webkit-background-clip: padding-box; background-clip: padding-box;
+}
+
+.border_radius_reset()  {
+	-webkit-border-radius: none;
+	   -moz-border-radius: none;
+		    border-radius: none;
+}
+
+.box_shadow(@shadow_x:3px, @shadow_y:3px, @shadow_rad:3px, @shadow_in:3px, @shadow_color:#888) {
+    box-shadow:@shadow_x @shadow_y @shadow_rad @shadow_in @shadow_color;
+    -webkit-box-shadow:@shadow_x @shadow_y @shadow_rad @shadow_in @shadow_color;
+}
+
+.inset_box_shadow(@shadow_x:3px, @shadow_y:3px, @shadow_rad:3px, @shadow_in:3px, @shadow_color:#888) {
+    box-shadow:inset @shadow_x @shadow_y @shadow_rad @shadow_in @shadow_color;
+    -webkit-box-shadow:inset @shadow_x @shadow_y @shadow_rad @shadow_in @shadow_color;
+}
+
+.box_shadow_reset()  {
+	-webkit-box-shadow: none;
+	   -moz-box-shadow: none;
+		    box-shadow: none;
+}
+
+.text_shadow(@shadow_x:3px, @shadow_y:3px, @shadow_rad:3px, @shadow_color:#fff) {
+    text-shadow:@shadow_x @shadow_y @shadow_rad @shadow_color;
+}
+
+.vertical_gradient(@from: #000, @to: #FFF) {
+	background-color: @from;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(@from), to(@to));   // Saf4+, Chrome
+	background-image: -webkit-linear-gradient(top, @from, @to);                                // Chrome 10+, Saf5.1+, iOS 5+
+	background-image:    -moz-linear-gradient(top, @from, @to);                                // FF3.6+
+	background-image:     -ms-linear-gradient(top, @from, @to);                                // IE10
+	background-image:      -o-linear-gradient(top, @from, @to);                                // Opera 11.10+
+	background-image:         linear-gradient(to bottom, @from, @to);
+}
+
+.transition(@selector:all, @animation:ease-in-out, @duration:.2s) {
+    -webkit-transition:@selector @animation @duration;
+    -moz-transition:@selector @animation @duration;
+    -ms-transition:@selector @animation @duration;
+    -o-transition:@selector @animation @duration;
+    transition:@selector @animation @duration;
+}
+
+.opacity(@opacity:0.75) {
+    opacity: @opacity;
+    filter:~"alpha(opacity=@opacity * 100)";
+}
+
+.rotate(@degree:1deg) {
+	-webkit-transform: rotate(@degree);    // Saf3.1+, Chrome
+	-moz-transform: rotate(@degree);       // FF3.5+
+	-ms-transform: rotate(@degree);        // IE9
+	-o-transform: rotate(@degree);         // Opera 10.5
+	transform: rotate(@degree);
+	zoom: 1;
+}
+
+.scale(@ratio:1.5) {
+  -webkit-transform:scale(@ratio);
+  -moz-transform:scale(@ratio);
+  -ms-transform:scale(@ratio);
+  -o-transform:scale(@ratio);
+  transform:scale(@ratio);
+}
+
+.radial_gradient(@from: #000, @to: #FFF) {
+	background: @from;
+    background: -webkit-gradient(radial, 50% 10%, 0, 50% 10%, 1000, from(@from), to(@to));
+    background: -moz-radial-gradient(center top, @from 0%, @to 100%);
+}
+
+.borderbox () {
+	-webkit-box-sizing: border-box; // Safari/Chrome, other WebKit
+    -moz-box-sizing: border-box;    // Firefox, other Gecko
+    box-sizing: border-box;         // Opera/IE 8+
+}
+
+.woo_notice() {
+    background: #FFFFFF;
+    border-left: 4px solid #255A8C;
+    -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.04);
+    -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.04);
+    -o-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.04);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.04);
+    margin: 5px 0 15px;
+    padding: 1px 12px;
+    font-size: 14px;
+}

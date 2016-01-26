@@ -1,0 +1,92 @@
+.wf-wrap .useful-links {
+  margin-left: 0;
+  display: block;
+  text-align: center;
+}
+.wf-wrap .useful-links li {
+  display: inline;
+  padding-right: 1.618em;
+}
+.wf-wrap .useful-links .documentation:before {
+  font-family: 'dashicons';
+  content: "\f123";
+  position: relative;
+  top: 2px;
+  right: 5px;
+}
+.wf-wrap .useful-links .changelog:before {
+  font-family: 'dashicons';
+  content: "\f107";
+  position: relative;
+  top: 2px;
+  right: 5px;
+}
+.wf-wrap .useful-links .support:before {
+  font-family: 'dashicons';
+  content: "\f328";
+  position: relative;
+  top: 2px;
+  right: 5px;
+}
+.wf-wrap .woo-notice {
+  background: #FFFFFF;
+  border-left: 4px solid #255A8C;
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.04);
+  -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.04);
+  -o-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.04);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.04);
+  margin: 5px 0 15px;
+  padding: 1px 12px;
+  font-size: 14px;
+}
+.wf-wrap .woo-notice p {
+  margin: .5em 0;
+  padding: 2px;
+}
+.wf-wrap .settings-section td .woo-notice {
+  margin-left: -10px;
+  margin-top: -15px;
+  margin-bottom: 0;
+}
+.wf-wrap .plugin-name strong {
+  display: block;
+}
+/* Styling for the 'useful links' section on desktop and larger screens. */
+@media screen and (min-width: 600px) {
+  .wf-wrap .nav-tab-wrapper {
+    margin-bottom: 1em;
+  }
+  .wf-wrap .theme-name {
+      display: block;
+      padding-top: 0.618em;
+    }
+  .wf-wrap #settings-sections.subsubsub {
+    position: relative;
+    margin-right: 140px;
+  }
+  .wf-wrap .useful-links {
+    margin-left: 1em;
+    position: absolute;
+    right: 20px;
+    text-align: left;
+  }
+  .wf-wrap .useful-links li {
+    display: block;
+    padding: 0;
+  }
+
+  body.rtl .wf-wrap #settings-sections.subsubsub {
+    margin-right: 0;
+    margin-left: 140px;
+  }
+
+  body.rtl .wf-wrap .useful-links {
+    margin-left: 0;
+    left: 20px;
+  }
+
+}
+span.logo img {
+  height: auto;
+  max-height: 31px;
+}

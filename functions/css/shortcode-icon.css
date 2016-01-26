@@ -1,0 +1,15 @@
+/* Icon Font */
+@font-face {
+  font-family: 'wooframework';
+  src: url('../assets/fonts/wooframework.eot');
+  src: url('../assets/fonts/wooframework.eot?#iefix') format('embedded-opentype'), url('../assets/fonts/wooframework.woff') format('woff'), url('../assets/fonts/wooframework.ttf') format('truetype'), url('../assets/fonts/wooframework.svg#wooframework') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+.mce-i-wf-shortcode-icon:before {
+  font-family: 'wooframework' !important;
+  content: "\e601";
+  font-size: 1.1em !important;
+  position: relative;
+  top: 1px;
+}
