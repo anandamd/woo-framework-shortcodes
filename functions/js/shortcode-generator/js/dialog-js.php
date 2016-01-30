@@ -15,18 +15,14 @@
 
     $woo_framework_path = trailingslashit( '../wp-content' . substr( $path_bits[1], 0, -3 ) );
 
-    //$woo_framework_url = plugin_dir_url( __FILE__ ) . 'functions/';
-    $woo_framework_url = esc_url( 'http://woo-shortcode/wp-content/plugins/woocommerce-framework-shortcodes/functions/' );
+    $woo_framework_url = esc_url( plugin_dir_url( __FILE__ . '../../../../' ) );
 
     // Check if this is a Windows server or not.
     $delimiter = '/';
     $dirname = wp_normalize_path( dirname( __FILE__ ) );
 
-    //$woo_framework_functions_path = str_replace( 'js' . $delimiter . 'shortcode-generator' . $delimiter . 'js', '', $dirname );
-    $woo_framework_functions_path = '/usr/home/anand/woo-shortcode/wp-content/plugins/woocommerce-framework-shortcodes/functions/';
+    $woo_framework_functions_path = dirname(__FILE__) .  '/../../../';
 
-    // Require admin functions.
-    //require_once( $woo_framework_functions_path . $delimiter . 'admin-functions.php' );
 
     global $google_fonts;
 
@@ -69,7 +65,7 @@
 
     $fonts = join( '|', $fonts_whitelist );
 ?>
-var shortcode_generator_url = '<?php echo esc_url( $woo_framework_url ); ?>' + 'js/shortcode-generator/';
+var shortcode_generator_url = '<?php echo esc_url( $woo_framework_url ); ?>/';
 
 
 var wooDialogHelper = {

@@ -23,8 +23,7 @@ $meetsMinVersion = version_compare($woo_framework_version, $MIN_VERSION) >= 0;
 
 $woo_framework_path = dirname(__FILE__) .  '/../../';
 
-//$woo_framework_url = plugin_dir_url( __FILE__ ) . 'functions/';
-$woo_framework_url = plugins_url() . '/woocommerce-framework-shortcodes/functions/';
+$woo_framework_url = esc_url( plugin_dir_url( dirname(__FILE__) .  '/../../' ) ) . 'functions/';
 
 $woo_shortcode_css = $woo_framework_path . 'css/shortcodes.css';
                                   
